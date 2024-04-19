@@ -1,0 +1,18 @@
+(defwidget bar_center []
+  (box
+    :halign "center"
+    :class "bar_center"
+    (titlebar)
+  )
+)
+
+(defwidget titlebar []
+  (box
+    :class "module"
+    (label
+      :class "titlebar-label txt-low"
+      :limit-width "10"
+      :text apptitles
+    )
+  )
+)
