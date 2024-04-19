@@ -1,0 +1,83 @@
+.module, .ws-inactive {
+  background-color: #131313;
+  color: #c0c3c7;
+  font-size: 15.5px;
+  font-weight: bolder;
+  padding: 0 10px 0 10px;
+  margin: 0 4px 0 4px; }
+
+.txt-low {
+  color: #555062; }
+
+.icon {
+  font-size: 20px;
+  color: #9155E9; }
+
+.sep {
+  font-size: 8px;
+  font-weight: bolder;
+  color: #555062; }
+
+.bar {
+  min-height: 30px;
+  margin: 4px 0; }
+
+.ws-inactive {
+  padding: unset;
+  margin: unset;
+  min-width: 35px;
+  background-color: #131313;
+  color: #555062;
+  border-color: #25224B; }
+  .ws-inactive label {
+    padding-bottom: 2px; }
+
+.ws-focused {
+  color: #9155E9;
+  border-bottom: 4px solid;
+  border-color: #9155E9; }
+
+.ws-active {
+  color: #25224B;
+  border-color: #25224B; }
+
+.scale {
+  border-radius: 99px;
+  transition: 0ms cubic-bezier(0.05, 0.7, 0.1, 1);
+  margin-right: 6px; }
+  .scale trough {
+    min-height: 3px;
+    min-width: 60px;
+    border-radius: 99px;
+    background-color: rgba(85, 80, 98, 0.3); }
+  .scale highlight {
+    min-width: 3px;
+    border-radius: 99px;
+    background-color: #9155E9;
+    transition: 0ms cubic-bezier(0.05, 0.7, 0.1, 1); }
+  .scale slider {
+    min-width: 5px;
+    margin: -5px;
+    border-radius: 99px;
+    background-color: #9155E9; }
+
+.prog-bar {
+  min-height: 4px;
+  padding: 0px;
+  border-radius: 99px; }
+  .prog-bar trough {
+    min-height: 4px;
+    min-width: 60px;
+    border-radius: 99px;
+    background-color: rgba(85, 80, 98, 0.3); }
+  .prog-bar progress {
+    min-height: 4px;
+    min-width: 4px;
+    border-radius: 99px;
+    border-radius: 99px;
+    background-color: #9155E9; }
+
+* {
+  all: unset;
+  font-family: mononoki Nerd Font;
+  border-radius: 12px; }

@@ -1,0 +1,25 @@
+.module {
+    background-color: $background;
+    color: $foreground;
+    // border: 2px solid;
+    // border-color: $unfocused;
+    font-size: 15.5px;
+    font-weight: bolder;
+    padding: 0 10px 0 10px;
+    margin: 0 4px 0 4px;
+}
+
+.txt-low {
+    color: $foreground-alt;
+}
+
+.icon {
+    font-size: 20px;
+    color: $focused;
+}
+
+.sep {
+    font-size: 8px;
+    font-weight: bolder;
+    color: $foreground-alt
+}

@@ -1,0 +1,9 @@
+@import './theme/colors_purple.scss';
+@import './lib.scss';
+@import './bar.scss';
+
+* {
+    all: unset;
+    font-family: mononoki Nerd Font;
+    border-radius: 12px;
+}
