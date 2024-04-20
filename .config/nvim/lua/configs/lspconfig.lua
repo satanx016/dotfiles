@@ -9,10 +9,3 @@ for _, lsp in ipairs(servers) do
     capabilities = lspconfig.capabilities,
   }
 end
-
--- typescript
-lspconfig.tsserver.setup {
-  on_attach = lspconfig.on_attach,
-  on_init = lspconfig.on_init,
-  capabilities = lspconfig.capabilities,
-}

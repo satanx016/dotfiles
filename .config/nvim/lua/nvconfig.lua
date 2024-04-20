@@ -8,7 +8,7 @@ M.ui = {
   changed_themes = {},
   theme_toggle = { "onedark", "one_light" },
   theme = "tokyonight", -- default theme
-  transparency = false,
+  transparency = true,
 
   cmp = {
     icons = true,
