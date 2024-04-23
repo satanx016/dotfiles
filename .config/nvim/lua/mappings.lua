@@ -50,9 +50,9 @@ map(v, "J", ":m '>+1<CR>gv=gv")
 map(n, "<leader>ch", "<cmd>NvCheatsheet<CR>", { desc = "Toggle NvCheatsheet" })
 
 -- Session
-map(n, "<leader>osl", function()
+map(n, "<leader>ol", function()
 	require("persistence").load({ last = true })
-end, { desc = "Restore last session" })
+end, { desc = "Load last session" })
 
 -- Format
 map(n, "<leader>F", function()
