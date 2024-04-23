@@ -1,5 +1,6 @@
 local map = vim.keymap.set
 local n, i, v, c, t = "n", "i", "v", "c", "t"
+local ic = { i, c }
 local nt = { n, t }
 
 map(n, "<leader>l", "<cmd>Lazy<CR>", { desc = "Lazy" })
@@ -9,12 +10,12 @@ map(i, "kj", "<ESC>")
 map(i, "jk", "<ESC>")
 
 -- Input mode caret movement
-map(i, "<C-b>", "<ESC>^i", { desc = "Move Beginning of line" })
-map(i, "<C-e>", "<End>", { desc = "Move End of line" })
-map(i, "<C-h>", "<Left>", { desc = "Move Left" })
-map(i, "<C-l>", "<Right>", { desc = "Move Right" })
-map(i, "<C-j>", "<Down>", { desc = "Move Down" })
-map(i, "<C-k>", "<Up>", { desc = "Move Up" })
+map(ic, "<C-b>", "<ESC>^i", { desc = "Move Beginning of line" })
+map(ic, "<C-e>", "<End>", { desc = "Move End of line" })
+map(ic, "<C-h>", "<Left>", { desc = "Move Left" })
+map(ic, "<C-l>", "<Right>", { desc = "Move Right" })
+map(ic, "<C-j>", "<Down>", { desc = "Move Down" })
+map(ic, "<C-k>", "<Up>", { desc = "Move Up" })
 
 map(n, "<Esc>", "<cmd>noh<CR>", { desc = "General Clear highlights" })
 
@@ -47,6 +48,11 @@ map(v, "K", ":m '<-2<CR>gv=gv")
 map(v, "J", ":m '>+1<CR>gv=gv")
 
 map(n, "<leader>ch", "<cmd>NvCheatsheet<CR>", { desc = "Toggle NvCheatsheet" })
+
+-- Session
+map(n, "<leader>osl", function()
+	require("persistence").load({ last = true })
+end, { desc = "Restore last session" })
 
 -- Format
 map(n, "<leader>F", function()
