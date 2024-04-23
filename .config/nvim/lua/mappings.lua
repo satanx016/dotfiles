@@ -34,7 +34,7 @@ map(n, "<A-k>", "<Cmd>hor res +1<CR>", { desc = "Resize Window up" })
 map(n, "<C-q>", "<C-w>q", { desc = "Window Close" })
 
 -- Editor QoL
-map(c, "<C-S-v>", "<C-r>\"") -- add paste in command mode
+map(c, "<C-S-v>", "<C-r>+") -- add paste in command mode
 
 map(n, "<C-s>", "<cmd>w<CR>", { desc = "File Save" })
 map(n, "<C-a>", "ggVG", { desc = "File Select whole" })
