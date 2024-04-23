@@ -144,3 +144,6 @@ end, { desc = "Whichkey query lookup" })
 
 -- Colorizer
 map(n, "<leader>h", "<Cmd>ColorizerToggle<CR>", { desc = "Highlight colors" })
+
+-- Lazy
+map(n, "<leader>L", "<Cmd>Lazy<CR>", { desc = "Lazy" })
