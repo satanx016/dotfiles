@@ -1,11 +1,5 @@
-print("Loading neovide")
-
--- local ui = require("nvconfig").ui
 -- Set font
 vim.o.guifont = "JetBrainsMono Nerd Font Propo:h11"
-
--- g:neovide_transparency should be 0 if you want to unify transparency of content and title bar.
--- vim.g.neovide_transparency = ui.transparency and 0.8 or 1
 
 vim.g.neovide_fullscreen = true
 vim.g.neovide_remember_window_size = true
