@@ -1,4 +1,5 @@
 set -x EDITOR nvim
+set -x VISUAL nvim
 
 alias rm 'rm -r'
 alias yeet 'yay -Rnsc'
