@@ -1,3 +1,5 @@
+set -x EDITOR nvim
+
 alias rm 'rm -r'
 alias yeet 'yay -Rnsc'
 alias crap 'yay -Qdtq'
