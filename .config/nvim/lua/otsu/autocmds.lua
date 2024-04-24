@@ -32,7 +32,6 @@ autocmd("BufWritePost", {
 		require("plenary.reload").reload_module("otsurc")
 		require("plenary.reload").reload_module("base46")
 		require("plenary.reload").reload_module(module)
-		print("Reloading config")
 
 		local config = require("nvconfig")
 
