@@ -4,7 +4,6 @@ local g = vim.g
 
 -------------------------------------- globals -----------------------------------------
 -- g.toggle_theme_icon = "   "
-require("configs.neovide")
 -------------------------------------- options ------------------------------------------
 o.laststatus = 3
 o.showmode = false
