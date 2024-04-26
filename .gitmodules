@@ -1,6 +1,6 @@
 [submodule ".config/OtsuNvim"]
 	path = .config/OtsuNvim
 	url = https://github.com/satanx016/OtsuNvim.git
-[submodule "nvim"]
-	path = .config/OtsuNvim
+[submodule ".config/nvim"]
+	path = .config/nvim
 	url = https://github.com/satanx016/OtsuNvim.git
