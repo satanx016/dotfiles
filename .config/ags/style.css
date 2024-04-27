@@ -11,7 +11,7 @@
 
 .icon {
   font-size: 20px;
-  color: #C2212E; }
+  color: #9155E9; }
 
 .sep {
   font-size: 8px;
@@ -28,18 +28,18 @@
   min-width: 35px;
   background-color: #131313;
   color: #555062;
-  border-color: #650808; }
+  border-color: #25224B; }
   .ws-inactive label {
     padding-bottom: 2px; }
 
 .ws-focused {
-  color: #C2212E;
+  color: #9155E9;
   border-bottom: 4px solid;
-  border-color: #C2212E; }
+  border-color: #9155E9; }
 
 .ws-active {
-  color: #650808;
-  border-color: #650808; }
+  color: #25224B;
+  border-color: #25224B; }
 
 .scale {
   border-radius: 99px;
@@ -53,13 +53,13 @@
   .scale highlight {
     min-width: 3px;
     border-radius: 99px;
-    background-color: #C2212E;
+    background-color: #9155E9;
     transition: 0ms cubic-bezier(0.05, 0.7, 0.1, 1); }
   .scale slider {
     min-width: 5px;
     margin: -5px;
     border-radius: 99px;
-    background-color: #C2212E; }
+    background-color: #9155E9; }
 
 .prog-bar {
   min-height: 4px;
@@ -75,7 +75,7 @@
     min-width: 4px;
     border-radius: 99px;
     border-radius: 99px;
-    background-color: #C2212E; }
+    background-color: #9155E9; }
 
 * {
   all: unset;
