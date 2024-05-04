@@ -1,3 +1,8 @@
 #!/bin/bash
 
-killall ags; ags
+if [[ "$1" == "--verbose" ]]; then # Print and watch ags logs
+    foot ~/.config/ags/logger
+    killall ags; ags &> ~/.config/ags/ags.log
+else
+    killall ags; ags
+fi
