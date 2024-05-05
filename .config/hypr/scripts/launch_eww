@@ -1,5 +1,0 @@
-#!/bin/bash
-
-killall eww
-eww open bar
-#eww open sidebar && sleep 1 && eww update waifu_art="$(.config/eww/scripts/./waifu.py 02)" &    
