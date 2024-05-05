@@ -19,9 +19,8 @@ void main() {
     vec3 color = vec3(pixColor[0], pixColor[1], pixColor[2]);
 
 
-    // vec3 VIB_coefLuma = vec3(0.333333, 0.333334, 0.333333); // was for `if VIB_LUMA == 1`
-    vec3 VIB_coefLuma = vec3(0.212656, 0.715158, 0.072186); // try both and see which one looks nicer.
-
+    vec3 VIB_coefLuma = vec3(0.333333, 0.333334, 0.333333); // was for `if VIB_LUMA == 1` *uniform adjustment across all color channels*
+    // vec3 VIB_coefLuma = vec3(0.212656, 0.715158, 0.072186); // *preserves the natural color balance and contrast of the scene*
     float luma = dot(VIB_coefLuma, color);
 
     float max_color = max(color[0], max(color[1], color[2]));
