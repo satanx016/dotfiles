@@ -2,7 +2,8 @@
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
         "type": "sixel",
-        "source":"~/Pictures/Characters/ZeroTsu/hmm.png",
+        // "source":"~/Pictures/Characters/ZeroTsu/hmm.png",
+        "source":"~/Pictures/Characters/Ganyu/ganyuEatingBackground.png",
         "width":18,
         "padding":{
             "top":1

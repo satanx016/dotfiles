@@ -13,15 +13,19 @@ alias tb taskbook
 
 function otsu_clear_pop
     command clear
-    chafa ~/Pictures/Characters/ZeroTsu/hmm.png --size=12
+    # chafa ~/Pictures/Characters/ZeroTsu/hmm.png --size=12
+    chafa ~/Pictures/Characters/Ganyu/ganyuEating --size=14
     echo
-    echo "↳ Sometimes... I wonder... If i'll ever could be a human like you ?"
+    # echo "↳ Sometimes... I wonder... If i'll ever could be a human like you ?"
+    echo "↳ I don't understand why people insist on going all out to try and prove how their existence is more valuable than everyone else's."
 end
 
 function otsu_pop
-    chafa ~/Pictures/Characters/ZeroTsu/hmm.png --size=12
+    # chafa ~/Pictures/Characters/ZeroTsu/hmm.png --size=12
+    chafa ~/Pictures/Characters/Ganyu/ganyuEating --size=14
     echo
-    echo '↳ hmm...'
+    # echo '↳ hmm...'
+    echo '↳ I can fix this...'
 end
 
 if status is-interactive; and not status is-login
