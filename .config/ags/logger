@@ -1,17 +1,24 @@
 #!/bin/bash
 
-# Logger for ags with Syntax highlighting, memoory usage logging
+# Ags logger 
+
+# Features :
+# memoory usage logging, syntax highlighting, with caching
 
 output_logs() {
-    file_cache=$(pygmentize -g ~/.config/ags/ags.log) #highlight and caching output before 'clear' statement for fast update
-    clear
     echo -e "$file_cache"
     echo -n 'MEM USAGE : '
     echo -n $(ps -o vsz=,rss= $(pgrep ags | tail -n 1) | awk '{print $2}' | rev | cut -c 4- | rev)
     echo 'mb'
-    sleep 1
+}
+
+cache_logs() {
+    file_cache=$(pygmentize -g ~/.config/ags/ags.log)
 }
 
 while true; do 
+    cache_logs
+    clear
     output_logs
+    sleep 1
 done
