@@ -1,17 +1,9 @@
 set -x EDITOR nvim
 set -x VISUAL nvim
 
-alias rm 'rm -r'
-alias yeet 'yay -Rnsc'
-alias crap 'yay -Qdtq'
-
-alias nv nvim
-
-alias neo 'command clear && fastfetch'
-alias tb taskbook
-
 source ~/.config/fish/./conf.d/waifus/ganyu.fish
 
+# Only init waifu popups and zoxide if the shell is interactive and not a login one
 if status is-interactive; and not status is-login
     alias clear waifu_clear_pop
     waifu_pop
