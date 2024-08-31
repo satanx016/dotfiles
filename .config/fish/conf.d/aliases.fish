@@ -3,16 +3,8 @@
 alias rm 'rm -r'
 alias yeet 'yay -Rnsc'
 alias crap 'yay -Qdtq'
+alias badapple 'notify-send \'This is what I call cool stuff 😈 \' && CACA_DRIVER=ncurses mpv -vo=caca https://youtu.be/FtutLA63Cp8'
 
 alias nv nvim
 
 alias neo 'command clear && fastfetch'
-
-# testing (to remove)
-alias kodo 'XDG_CONFIG_HOME=~/projects/test/kodo/ \
-XDG_DATA_HOME=~/projects/test/kodo/.local/ \
-nvim'
-
-alias dhor 'XDG_CONFIG_HOME=~/projects/test/dhor/ \
-XDG_DATA_HOME=~/projects/test/dhor/.local/ \
-nvim'
