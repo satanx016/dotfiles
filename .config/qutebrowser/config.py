@@ -94,4 +94,4 @@ c.colors.webpage.darkmode.policy.images = 'never'
 c.fonts.default_family = 'Mononoki Nerd Font'
 
 # Bindings for normal mode
-config.bind('<Ctrl+Shift+y>', 'hint links spawn --detach mpv {hint-url}')
+config.bind('<Ctrl+Shift+y>', "hint links spawn --detach mpv --ytdl-format='bestvideo[vcodec^=avc1]+bestaudio/best' {hint-url}")
