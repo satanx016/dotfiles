@@ -5,7 +5,7 @@ c.qt.workarounds.disable_accelerated_2d_canvas = 'never'
 
 c.auto_save.session = True
 c.scrolling.smooth = True
-c.content.javascript.clipboard = 'access'
+c.content.javascript.clipboard = 'access-paste'
 
 c.editor.command = ['foot', '-c', '.config/foot/footNoPadding.ini', 'nvim', '-f', '{file}', '-c', 'normal {line}G{column0}l']
 c.fileselect.single_file.command = ['foot', '-c', '-e', 'ranger', '--choosefile={}']
