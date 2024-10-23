@@ -2,9 +2,9 @@
 
 CUR_SHADER=$(hyprctl getoption decoration:screen_shader | grep "str:" | awk '{print $2}')
 
-hyprctl keyword decoration:screen_shader "" # Put back shaders
+hyprctl keyword decoration:screen_shader "" # Off with the shaders
 CMD=$(hyprpicker -a -n)
-hyprctl keyword decoration:screen_shader $CUR_SHADER # Put back shaders
+hyprctl keyword decoration:screen_shader $CUR_SHADER # Put them back
 
 TMP=/tmp/xcolor_$CMD.png
 
