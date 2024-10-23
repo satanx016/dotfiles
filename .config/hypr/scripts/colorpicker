@@ -1,20 +1,12 @@
 #!/bin/bash
 
-TMPPCK=$(hyprpicker -a -n)
-TMPPST=$(wl-paste)
-CMD=$(echo "$TMPPST")
+CUR_SHADER=$(hyprctl getoption decoration:screen_shader | grep "str:" | awk '{print $2}')
+
+hyprctl keyword decoration:screen_shader "" # Put back shaders
+CMD=$(hyprpicker -a -n)
+hyprctl keyword decoration:screen_shader $CUR_SHADER # Put back shaders
+
 TMP=/tmp/xcolor_$CMD.png
 
-hyprpick() {
-    $TMPPCK
-}
-
-main() {
-    convert -size 120x120 xc:"$CMD" "$TMP"
-    printf %s "$CMD" | wl-paste
-
-    notify-send -a "Color Picker" -i "$TMP" "$CMD"
-}
-
-hyprpick
-main
+printf %s "$CMD" | wl-paste
+notify-send -a "hyprpicker" "Hyprpicker:" -i "$TMP" "$CMD"
