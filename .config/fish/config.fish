@@ -1,9 +1,5 @@
 set -x EDITOR nvim
 set -x VISUAL nvim
-# IME for 日本語 ⛩️
-set -x GTK_IM_MODULE fcitx
-set -x QT_IM_MODULE fcitx
-set -x XMODIFIERS "@im=fcitx"
 
 source ~/.config/fish/./conf.d/waifus/ganyu.fish
 
