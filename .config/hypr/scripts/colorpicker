@@ -6,16 +6,15 @@ CMD=$(echo "$TMPPST")
 TMP=/tmp/xcolor_$CMD.png
 
 hyprpick() {
-  $TMPPCK
+    $TMPPCK
 }
 
 main() {
-  convert -size 120x120 xc:"$CMD" "$TMP"
-  printf %s "$CMD" | wl-paste 
+    convert -size 120x120 xc:"$CMD" "$TMP"
+    printf %s "$CMD" | wl-paste
 
-  notify-send -a "Color Picker" -i "$TMP" "$CMD"
+    notify-send -a "Color Picker" -i "$TMP" "$CMD"
 }
-
 
 hyprpick
 main
