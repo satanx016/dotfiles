@@ -11,32 +11,32 @@ const float VIB_VIBRANCE = 0.40;
 const vec3 VIB_coeffVibrance = VIB_RGB_BALANCE * -VIB_VIBRANCE;
 
 void main() {
-	vec2 tc = vec2(v_texcoord.x, v_texcoord.y);
+    vec2 tc = vec2(v_texcoord.x, v_texcoord.y);
 
-	// Distance from the center
-	float dx = abs(0.5-tc.x);
-	float dy = abs(0.5-tc.y);
+    // Distance from the center
+    float dx = abs(0.5-tc.x);
+    float dy = abs(0.5-tc.y);
 
-	// Square it to smooth the edges
-	dx *= dx;
-	dy *= dy;
+    // Square it to smooth the edges
+    dx *= dx;
+    dy *= dy;
 
-	tc.x -= 0.5;
-	tc.x *= 1.0 + (dy * 0.05);
-	tc.x += 0.5;
+    tc.x -= 0.5;
+    tc.x *= 1.0 + (dy * 0.05);
+    tc.x += 0.5;
 
-	tc.y -= 0.5;
-	tc.y *= 1.0 + (dx * 0.18);
-	tc.y += 0.5;
+    tc.y -= 0.5;
+    tc.y *= 1.0 + (dx * 0.18);
+    tc.y += 0.5;
 
-	// Get texel, and add in scanline if need be
-	vec4 cta = texture2D(tex, vec2(tc.x, tc.y));
+    // Get texel, and add in scanline if need be
+    vec4 cta = texture2D(tex, vec2(tc.x, tc.y));
 
-	cta.rgb += sin(tc.y * 1250.0) * 0.02;
+    cta.rgb += sin(tc.y * 1250.0) * 0.02;
 
-	// Cutoff
-	if(tc.y > 1.0 || tc.x < 0.0 || tc.x > 1.0 || tc.y < 0.0)
-		cta = vec4(0.0);
+    // Cutoff
+    if(tc.y > 1.0 || tc.x < 0.0 || tc.x > 1.0 || tc.y < 0.0)
+        cta = vec4(0.0);
 
 
     // RGB
@@ -59,6 +59,6 @@ void main() {
     cta[1] = mix(luma, color[1], p_col[1]);
     cta[2] = mix(luma, color[2], p_col[2]);
 
-	// Apply
-	gl_FragColor = cta;
+    // Apply
+    gl_FragColor = cta;
 }
