@@ -1,3 +1,5 @@
+set PATH $PATH /home/satanx016/.local/bin
+
 set -x EDITOR nvim
 set -x VISUAL nvim
 
