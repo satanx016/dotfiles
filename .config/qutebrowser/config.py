@@ -24,4 +24,4 @@ c.colors.webpage.darkmode.enabled = True
 c.colors.webpage.darkmode.algorithm = 'lightness-cielab'
 c.colors.webpage.darkmode.policy.images = 'never'
 
-config.bind('<Ctrl+Shift+y>', "hint links spawn --detach mpv --ytdl-format='bestvideo[vcodec^=avc1]+bestaudio/best' {hint-url}")
+config.bind('<Ctrl+Shift+y>', "hint links spawn --detach mpv {hint-url}")
