@@ -8,9 +8,10 @@ c.scrolling.smooth = True
 c.content.javascript.clipboard = 'access-paste'
 
 c.editor.command = ['foot', '-c', '.config/foot/footNoPadding.ini', 'nvim', '-f', '{file}', '-c', 'normal {line}G{column0}l']
-c.fileselect.single_file.command = ['foot', '-c', '-e', 'ranger', '--choosefile={}']
-c.fileselect.multiple_files.command = ['foot', '-c', '-e', 'ranger', '--choosefiles={}']
-c.fileselect.folder.command = ['foot', '-c', '-e', 'ranger', '--choosedir={}']
+c.fileselect.handler = 'external'
+c.fileselect.single_file.command = ['foot', '-e', 'yazi', '--chooser-file={}']
+c.fileselect.multiple_files.command = ['foot', '-e', 'yazi', '--chooser-file={}']
+c.fileselect.folder.command = ['foot', '-e', 'yazi', '--cwd-file={}']
 
 
 c.url.default_page = 'https://alljavi.github.io/tartarus-startpage/'
