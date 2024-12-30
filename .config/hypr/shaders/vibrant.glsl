@@ -6,7 +6,7 @@ uniform sampler2D tex;
 
 // see https://github.com/CeeJayDK/SweetFX/blob/a792aee788c6203385a858ebdea82a77f81c67f0/Shaders/Vibrance.fx#L20-L30
 const vec3 VIB_RGB_BALANCE = vec3(1.0, 1.0, 1.0);
-const float VIB_VIBRANCE = 0.40;
+const float VIB_VIBRANCE = 0.50;
 
 
 const vec3 VIB_coeffVibrance = VIB_RGB_BALANCE * -VIB_VIBRANCE;
@@ -19,8 +19,7 @@ void main() {
     vec3 color = vec3(pixColor[0], pixColor[1], pixColor[2]);
 
 
-    vec3 VIB_coefLuma = vec3(0.333333, 0.333334, 0.333333); // was for `if VIB_LUMA == 1` *uniform adjustment across all color channels*
-    // vec3 VIB_coefLuma = vec3(0.212656, 0.715158, 0.072186); // *preserves the natural color balance and contrast of the scene*
+    vec3 VIB_coefLuma = vec3(0.212656, 0.715158, 0.072186); // *preserves the natural color balance and contrast of the scene*
     float luma = dot(VIB_coefLuma, color);
 
     float max_color = max(color[0], max(color[1], color[2]));
