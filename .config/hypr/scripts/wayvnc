@@ -1,16 +1,12 @@
 #!/bin/bash
 
-# Start a wayVNC server outputting a fake second monitor to my tablet
+# Start a wayVNC server casting a fake screen to my tablet
+wayvnc
 
-max_workspace=6
+hyprctl output destroy WAYVNC-1
+hyprctl output create headless WAYVNC-1
 
-hyprctl output create headless
-hyprctl keyword monitor desc:, disable,1280x800, 1600x100, 1.3333
+# define workspaces
+hyprctl keyword workspace 5,monitor:WAYVNC-1
 
-for i in $(seq 1 $max_workspace); do
-    if $i == 5; then
-        hyprctl keyword workspace $i,monitor:desc:
-    else
-        hyprctl keyword workspace $i,monitor:LVDS-1
-    fi
-done
+wayvncctl output-set WAYVNC-1
